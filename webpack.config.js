@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 module.exports = {
-    entry: ['babel-polyfill', './app/main'], 
+    entry: ['babel-polyfill', './client/main'], 
     output: {
     filename: './public/bundle.js',
     path: __dirname,
@@ -16,7 +16,7 @@ module.exports = {
         rules: [
             {
                 test: /jsx?$/,
-                include: resolve(__dirname, './app'),
+                include: resolve(__dirname, './client'),
                 loader: 'babel-loader',
             },
             {

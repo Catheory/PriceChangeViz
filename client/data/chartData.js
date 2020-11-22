@@ -1,10 +1,8 @@
-const db = require('../server/db')
+import React from 'react';
 
+//use regex to convert csv to array of data
 
-//use regex to convert csv to array of data 
-
-const dataStr_Vehicle = 
-`2020,21312.00
+const dataStr_Vehicle = `2020,21312.00
 2019,20924.89
 2018,20552.88
 2017,20063.34
@@ -77,11 +75,7 @@ const dataStr_Vehicle =
 1950,1973.17
 `.split(/,|\n/);
 
-
-
-
-const dataStr_Vegfruit = 
-`2020,6.00
+const dataStr_Vegfruit = `2020,6.00
 2019,5.89
 2018,5.79
 2017,5.65
@@ -152,11 +146,9 @@ const dataStr_Vegfruit =
 1952,0.61
 1951,0.60
 1950,0.56
-`.split(/,|\n/)
+`.split(/,|\n/);
 
-
-const dataStr_Income = 
-`2020,65331.05,65331.05
+const dataStr_Income = `2020,65331.05,65331.05
 2019,63030.00,64196.06
 2018,60810.00,63056.01
 2017,58849.00,62511.53
@@ -227,5 +219,100 @@ const dataStr_Income =
 1952,3747.20,36810.02
 1951,3523.60,35278.10
 1950,3300.00,35642.94
-`.split(/,|\n/)
+`.split(/,|\n/);
+
+export const labels = [
+  "1950",
+  "1951",
+  "1952",
+  "1953",
+  "1954",
+  "1955",
+  "1956",
+  "1957",
+  "1958",
+  "1959",
+  "1960",
+  "1961",
+  "1962",
+  "1963",
+  "1964",
+  "1965",
+  "1966",
+  "1967",
+  "1968",
+  "1969",
+  "1970",
+  "1971",
+  "1972",
+  "1973",
+  "1974",
+  "1975",
+  "1976",
+  "1977",
+  "1978",
+  "1979",
+  "1980",
+  "1981",
+  "1982",
+  "1983",
+  "1984",
+  "1985",
+  "1986",
+  "1987",
+  "1988",
+  "1989",
+  "1990",
+  "1991",
+  "1992",
+  "1993",
+  "1994",
+  "1995",
+  "1996",
+  "1997",
+  "1998",
+  "1999",
+  "2000",
+  "2001",
+  "2002",
+  "2003",
+  "2004",
+  "2005",
+  "2006",
+  "2007",
+  "2008",
+  "2009",
+  "2010",
+  "2011",
+  "2012",
+  "2013",
+  "2014",
+  "2015",
+  "2016",
+  "2017",
+  "2018",
+  "2019",
+  "2020",
+];
+
+export const vehiclePrice = [];
+
+for (let i = dataStr_Vehicle.length - 2; i + 1 > 0; i -= 2) {
+  vehiclePrice.push(Number(dataStr_Vehicle[i]));
+}
+
+
+export const vegfruitPrice = [];
+
+for(let i=dataStr_Vegfruit.length - 2; i + 1>0; i -= 2) {
+    vegfruitPrice.push(Number(dataStr_Vegfruit[i]));
+}
+
+
+export const medianIncome = [];
+
+for(let i = dataStr_Income.length - 3; i +1>0; i -=3){
+    medianIncome.push(Number(dataStr_Income[i]));
+}
+
 
