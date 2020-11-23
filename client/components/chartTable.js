@@ -1,6 +1,4 @@
-import { black } from "chalk";
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {
   labels,
   vehiclePrice,
